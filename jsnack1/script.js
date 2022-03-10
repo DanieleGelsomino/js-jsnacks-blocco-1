@@ -10,13 +10,20 @@ const invitedList = ["danny", "john", "jack", "emily"];
 
 const nameInvited = prompt("Inserisci il tuo nome");
 
-let confirm = false;
+// questa variabile serve per capire se ho trovato il nome oppure no all'interno del mio array,
+//inizialmente è falsa perchè non ho trovato il nome dato che non ho cominciato a guardare nell'array.
+
+let trovato = false;
 
 for (let i = 0; i < invitedList.length; i++) {
-  if (nameInvited.toLowerCase() === invitedList[i]) {
-    confirm = true;
+  if (nameInvited.trim().toLowerCase() === invitedList[i]) {
+    // ho trovato il nome
     console.log("Puoi entrare");
-  } else {
-    console.log("Non puoi entrare");
+    trovato = true;
   }
+}
+
+if (trovato == false) {
+  // questo vuol dire che non ho trovato il nome
+  console.log("Non puoi entrare");
 }
