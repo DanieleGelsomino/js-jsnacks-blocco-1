@@ -17,4 +17,7 @@ if (isNaN(inputNumero) || !(inputNumero.length == 4)) {
 } else {
   console.log("Hai inserito correttamente!");
   console.log("la somma delle tue cifre è: " + sommaCifre);
+  const risultato = document.getElementById("results");
+  const somma = risultato;
+  somma.innerText = "la somma delle tue cifre è: " + sommaCifre;
 }
