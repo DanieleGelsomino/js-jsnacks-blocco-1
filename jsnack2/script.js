@@ -14,5 +14,8 @@ for (let i = 0; i < 6; i++) {
   if (number % 2 !== 0) {
     containerNumber.push(number);
   }
-  console.log(containerNumber);
+  console.log("dispari: " + containerNumber);
+  const risultato = document.getElementById("results");
+  const numeriDispari = risultato;
+  numeriDispari.innerText = "Numeri dispari: " + containerNumber;
 }
