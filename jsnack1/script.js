@@ -20,10 +20,17 @@ for (let i = 0; i < invitedList.length; i++) {
     // ho trovato il nome
     console.log("Puoi entrare");
     trovato = true;
+    const confermaLista = document.getElementById("confirm");
+    const conferma = confermaLista;
+    conferma.innerText = "Puoi entrare " + nameInvited + " sei in lista.";
   }
 }
 
 if (trovato == false) {
   // questo vuol dire che non ho trovato il nome
   console.log("Non puoi entrare");
+  const confermaLista = document.getElementById("confirm");
+  const conferma = confermaLista;
+  conferma.innerText =
+    " Non puoi entrare " + nameInvited + " purtroppo non sei in lista.";
 }
